@@ -39,14 +39,14 @@ const whyChooseUsData = [
 // NEW ADVANCED FEATURES DATA
 
 const testimonialsData = [
-    { name: "John Doe", company: "Tech Innovators Ltd", text: "Aimtech transformed our business operations. Their custom software is flawless." },
-    { name: "Jane Smith", company: "Creative Minds", text: "Aimnex handled our complete rebrand and media campaign. The results were astounding." },
+    { name: "Michael Kamau", company: "Tech Innovators Ltd", text: "Aimtech transformed our business operations. Their custom software is flawless." },
+    { name: "Sarah Wanjiku", company: "Creative Minds", text: "Aimnex handled our complete rebrand and media campaign. The results were astounding." },
     { name: "Michael Johnson", company: "Global Logistics", text: "The cybersecurity audit was thorough and eye-opening. We feel much safer now." },
     { name: "Sarah Williams", company: "EduCare Group", text: "The corporate training provided by Aimtech Institute upskilled our entire IT department." }
 ];
 
 const pricingData = [
-    { tier: "Basic Web Package", price: "Contact Us", features: ["5 Page Website", "Basic SEO", "Mobile Responsive", "1 Month Support"] },
+    { tier: "SME Starter Solution", price: "Contact Us", features: ["5 Page Website", "Initial Security Audit", "Mobile Responsive", "1 Month Support"] },
     { tier: "Corporate Branding", price: "Contact Us", features: ["Logo Design", "Brand Guidelines", "Business Cards", "Letterheads"] },
     { tier: "Digital Marketing", price: "Contact Us", features: ["Social Media Management", "Content Creation", "Monthly Reports", "Ad Campaign Setup"] }
 ];
