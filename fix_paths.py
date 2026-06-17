@@ -1,47 +1,46 @@
-
 import os
+import re
 
-def fix_file(file_path, replacements):
-    try:
-        if not os.path.exists(file_path):
-            print(f"Skipping {file_path} (not found)")
-            return
-        
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        original_content = content
-        for old, new in replacements:
-            content = content.replace(old, new)
-        
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Updated {file_path}")
-        else:
-            print(f"No changes for {file_path}")
-            
-    except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+directory = r'c:\Users\wilso\OneDrive\Desktop\Projects\minty-lime_2'
 
-# Fix Google Fonts CSS
-google_fonts_dir = r"wp-content/uploads/elementor/google-fonts/css"
-if os.path.exists(google_fonts_dir):
-    for filename in os.listdir(google_fonts_dir):
-        if filename.endswith(".css"):
-            fix_file(os.path.join(google_fonts_dir, filename), [
-                ("http://mintylime.co.ke/wp-content/uploads/elementor/google-fonts/fonts/", "../fonts/"),
-                ("https://mintylime.co.ke/wp-content/uploads/elementor/google-fonts/fonts/", "../fonts/")
-            ])
+count = 0
+for root, dirs, files in os.walk(directory):
+    for file in files:
+        if file.endswith(".html"):
+            filepath = os.path.join(root, file)
+            # Calculate depth relative to root directory
+            rel_dir = os.path.relpath(root, directory)
+            if rel_dir == '.':
+                prefix = './'
+            else:
+                depth = len(rel_dir.split(os.sep))
+                prefix = '../' * depth
 
-# Fix Elementor CSS
-elementor_css_dir = r"wp-content/uploads/elementor/css"
-if os.path.exists(elementor_css_dir):
-    for filename in os.listdir(elementor_css_dir):
-        if filename.endswith(".css"):
-            fix_file(os.path.join(elementor_css_dir, filename), [
-                ("https://mintylime.co.ke/wp-content/uploads/", "../../"),
-                ("http://mintylime.co.ke/wp-content/uploads/", "../../")
-            ])
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()
 
-print("Done.")
+            modified = False
+
+            # Replace specific absolute paths we injected
+            paths_to_fix = [
+                '/assets/images/austinemakwaka.png',
+                '/assets/css/chatbot.css',
+                '/assets/js/chatbot.js',
+                '/assets/css/whatsapp.css'
+            ]
+
+            for p in paths_to_fix:
+                if f'src="{p}"' in content or f"src='{p}'" in content or f'href="{p}"' in content or f"href='{p}'" in content:
+                    new_path = prefix + p.lstrip('/')
+                    content = content.replace(f'src="{p}"', f'src="{new_path}"')
+                    content = content.replace(f"src='{p}'", f"src='{new_path}'")
+                    content = content.replace(f'href="{p}"', f'href="{new_path}"')
+                    content = content.replace(f"href='{p}'", f"href='{new_path}'")
+                    modified = True
+
+            if modified:
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                count += 1
+
+print(f"Fixed absolute paths to relative paths in {count} files")
