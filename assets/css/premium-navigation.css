@@ -1,0 +1,95 @@
+/* Premium Navigation Dropdown CSS */
+
+/* Container and relative positioning for the dropdown parent */
+.elementor-nav-menu--main .menu-item-has-children {
+    position: relative;
+}
+
+/* Ensure the dropdown list starts hidden and styled */
+.elementor-nav-menu--main .menu-item-has-children .sub-menu.elementor-nav-menu--dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    padding: 10px 0;
+    margin: 0;
+    background: rgba(20, 25, 35, 0.85); /* Glassmorphism base */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    
+    /* Animation states */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+    list-style: none;
+    z-index: 9999;
+}
+
+/* Show dropdown on hover over the parent li */
+.elementor-nav-menu--main .menu-item-has-children:hover > .sub-menu.elementor-nav-menu--dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Style the links inside the dropdown */
+.elementor-nav-menu--main .sub-menu.elementor-nav-menu--dropdown > li {
+    margin: 0;
+    padding: 0;
+}
+
+.elementor-nav-menu--main .sub-menu.elementor-nav-menu--dropdown a {
+    display: block;
+    padding: 12px 24px;
+    color: #e2e8f0;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+/* Hover effect on dropdown links */
+.elementor-nav-menu--main .sub-menu.elementor-nav-menu--dropdown a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #9ECC3B; /* Brand color */
+    border-left: 3px solid #9ECC3B;
+    padding-left: 28px; /* Slight indent on hover */
+}
+
+/* Keep the dropdown open when hovering over the dropdown itself */
+.elementor-nav-menu--main .sub-menu.elementor-nav-menu--dropdown:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile Accordion overrides */
+@media (max-width: 1024px) {
+    .elementor-nav-menu--dropdown .menu-item-has-children > .sub-menu {
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        backdrop-filter: none !important;
+        border: none !important;
+        padding-left: 15px;
+        display: none; /* Elementor JS handles the display toggle */
+    }
+    .elementor-nav-menu--dropdown .menu-item-has-children.elementor-active > .sub-menu {
+        display: block;
+        animation: mobileDropdownFade 0.3s ease forwards;
+    }
+}
+
+@keyframes mobileDropdownFade {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

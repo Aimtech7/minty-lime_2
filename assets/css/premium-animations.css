@@ -1,0 +1,140 @@
+/* Premium Cinematic Agency Animations */
+
+/* 1. Ken Burns Effect for Elementor Background Slideshow */
+/* Elementor typically renders the slideshow images as background images inside .elementor-background-slideshow__slide__image */
+.elementor-background-slideshow__slide__image {
+    animation: kenBurns 12s ease-in-out infinite alternate !important;
+    transform-origin: center center;
+}
+
+/* Stagger directions for different slides if possible via pseudo selectors */
+.elementor-background-slideshow__slide:nth-child(even) .elementor-background-slideshow__slide__image {
+    animation: kenBurnsReverse 14s ease-in-out infinite alternate !important;
+}
+
+@keyframes kenBurns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.1) translate(-1%, -1%); }
+}
+
+@keyframes kenBurnsReverse {
+    0% { transform: scale(1.1) translate(1%, 1%); }
+    100% { transform: scale(1) translate(0, 0); }
+}
+
+/* 2. Cinematic Dark Overlay for Hero Sections */
+/* The hero container is 6a313cb */
+.elementor-element-6a313cb {
+    position: relative;
+}
+
+.elementor-element-6a313cb::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    /* Rich cinematic gradient */
+    background: linear-gradient(135deg, rgba(8, 12, 21, 0.8) 0%, rgba(15, 23, 42, 0.6) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure inner content sits above the overlay */
+.elementor-element-6a313cb > .e-con-inner {
+    position: relative;
+    z-index: 1;
+}
+
+/* 3. Global Navigation Cinematic Effects */
+.elementor-nav-menu--main .elementor-item {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.elementor-nav-menu--main .elementor-item::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #9ECC3B; /* Brand highlight color */
+    transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.elementor-nav-menu--main .elementor-item:hover::after,
+.elementor-nav-menu--main .elementor-item.elementor-item-active::after {
+    width: 100%;
+}
+
+/* 4. Premium CTA Button Micro-interactions */
+.elementor-button {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.3s ease !important;
+}
+
+.elementor-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(158, 204, 59, 0.3); /* Subtle brand-colored glow */
+}
+
+/* 5. Smooth text rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Override AOS defaults to be more dramatic if needed */
+[data-aos] {
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+
+/* 6. Custom Hero Slider Styling */
+#minty-hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#minty-hero-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    transform: scale(1);
+}
+
+#minty-hero-slider .slide.active {
+    opacity: 1;
+    /* The Ken Burns animation triggers when the slide becomes active */
+    animation: kenBurnsCustom 15s linear forwards;
+}
+
+#minty-hero-slider .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(8, 12, 21, 0.8) 0%, rgba(15, 23, 42, 0.65) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes kenBurnsCustom {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.15) translate(-1%, -1%); }
+}
