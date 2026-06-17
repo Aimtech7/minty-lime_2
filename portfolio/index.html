@@ -186,20 +186,25 @@
 </div>
 </section>
 
-<!-- Portfolio Filter -->
+<!-- Portfolio Filter & Search -->
 <section class="elementor-section elementor-top-section elementor-element elementor-element-filter elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="filter" data-settings='{"background_background":"classic","jet_parallax_layout_list":[],"_ob_glider_is_slider":"no"}'>
 <div class="elementor-container elementor-column-gap-default">
 <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-filter-col" data-element_type="column" data-id="filter-col" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-filter-buttons ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="filter-buttons" data-settings='{"_ob_use_harakiri":"yes","_ob_harakiri_writing_mode":"inherit","_ob_postman_use":"no","_ob_widget_stalker_use":"no","_ob_poopart_use":"yes","_ob_shadough_use":"no","_ob_allow_hoveranimator":"no"}' data-widget_type="text-editor.default">
 <div class="elementor-widget-container" data-aos="fade-up" data-aos-delay="100">
+<div class="portfolio-search-wrapper">
+<div class="portfolio-search">
+<input id="portfolio-search-input" placeholder="Search projects..." type="text"/>
+</div>
 <div class="portfolio-filter">
 <button class="filter-btn active" data-filter="all">All Projects</button>
-<button class="filter-btn" data-filter="software">Software</button>
-<button class="filter-btn" data-filter="mobile">Mobile</button>
+<button class="filter-btn" data-filter="software">Software Development</button>
+<button class="filter-btn" data-filter="mobile">Mobile Applications</button>
+<button class="filter-btn" data-filter="ai">AI Projects</button>
 <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
-<button class="filter-btn" data-filter="ai">AI & Automation</button>
-<button class="filter-btn" data-filter="web">Web Design</button>
+<button class="filter-btn" data-filter="business">Business Systems</button>
+</div>
 </div>
 </div>
 </div>
@@ -211,144 +216,400 @@
 <!-- Portfolio Grid -->
 <section class="elementor-section elementor-top-section elementor-element elementor-element-portfolio-grid elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="portfolio-grid" data-settings='{"background_background":"classic","jet_parallax_layout_list":[],"_ob_glider_is_slider":"no"}'>
 <div class="elementor-container elementor-column-gap-wider">
-<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-portfolio-1" data-element_type="column" data-id="portfolio-1" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-portfolio-1" data-element_type="column" data-id="portfolio-1" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-portfolio-card-1 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="portfolio-card-1" data-settings='{"_ob_use_harakiri":"yes","_ob_harakiri_writing_mode":"inherit","_ob_postman_use":"no","_ob_widget_stalker_use":"no","_ob_poopart_use":"yes","_ob_shadough_use":"no","_ob_allow_hoveranimator":"no"}' data-widget_type="text-editor.default">
 <div class="elementor-widget-container" data-aos="fade-up" data-aos-delay="150">
-<div class="portfolio-item" data-category="software">
+<div class="portfolio-item detailed" data-category="software business">
+<div class="portfolio-hero">
 <img alt="EduWell Platform" class="portfolio-image" src="/assets/images/2021/07/eduwell-placeholder.jpg"/>
-<div class="portfolio-overlay">
+<div class="portfolio-category-badge">Software Development</div>
+</div>
+<div class="portfolio-content">
 <h4>EduWell Platform</h4>
-<p>Learning Management System</p>
-<a class="portfolio-link" href="../case-studies/index.html">View Details</a>
+<p class="portfolio-subtitle">Learning Management System</p>
+<div class="portfolio-description">
+<p>A comprehensive education management system that helps schools and educational institutions manage students, classes, assessments, and communications efficiently.</p>
+</div>
+<div class="portfolio-problem">
+<strong>Problem Solved:</strong>
+<p>Manual record-keeping, inefficient communication between teachers and parents, and lack of centralized student data management.</p>
+</div>
+<div class="portfolio-features">
+<strong>Key Features:</strong>
+<ul>
+<li>Student tracking & grade management</li>
+<li>Attendance monitoring system</li>
+<li>Parent communication portal</li>
+<li>Assessment & exam management</li>
+<li>Timetable scheduling</li>
+</ul>
+</div>
+<div class="portfolio-tech">
+<strong>Technologies:</strong>
+<span class="tech-tag">React</span>
+<span class="tech-tag">Python</span>
+<span class="tech-tag">Django</span>
+<span class="tech-tag">PostgreSQL</span>
+</div>
+<div class="portfolio-results">
+<strong>Results:</strong>
+<p>40% improvement in administrative efficiency, 60% reduction in paper usage, enhanced parent engagement by 85%.</p>
+</div>
+<div class="portfolio-links">
+<a class="portfolio-link-btn" href="#" target="_blank">GitHub</a>
+<a class="portfolio-link-btn primary" href="#" target="_blank">Live Demo</a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-portfolio-2" data-element_type="column" data-id="portfolio-2" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-portfolio-2" data-element_type="column" data-id="portfolio-2" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-portfolio-card-2 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="portfolio-card-2" data-settings='{"_ob_use_harakiri":"yes","_ob_harakiri_writing_mode":"inherit","_ob_postman_use":"no","_ob_widget_stalker_use":"no","_ob_poopart_use":"yes","_ob_shadough_use":"no","_ob_allow_hoveranimator":"no"}' data-widget_type="text-editor.default">
 <div class="elementor-widget-container" data-aos="fade-up" data-aos-delay="200">
-<div class="portfolio-item" data-category="software">
+<div class="portfolio-item detailed" data-category="software business">
+<div class="portfolio-hero">
 <img alt="CyberCafe POS" class="portfolio-image" src="/assets/images/2021/07/cybercafe-placeholder.jpg"/>
-<div class="portfolio-overlay">
+<div class="portfolio-category-badge">Business Systems</div>
+</div>
+<div class="portfolio-content">
 <h4>CyberCafe POS</h4>
-<p>Point of Sale System</p>
-<a class="portfolio-link" href="../case-studies/index.html">View Details</a>
+<p class="portfolio-subtitle">Point of Sale System</p>
+<div class="portfolio-description">
+<p>A robust point-of-sale system designed for cyber cafes and retail businesses with comprehensive inventory and sales management.</p>
+</div>
+<div class="portfolio-problem">
+<strong>Problem Solved:</strong>
+<p>Lack of real-time sales tracking, manual inventory management, and inefficient customer billing processes.</p>
+</div>
+<div class="portfolio-features">
+<strong>Key Features:</strong>
+<ul>
+<li>Real-time inventory management</li>
+<li>Sales tracking & analytics</li>
+<li>Customer management system</li>
+<li>Multi-location support</li>
+<li>Automated reporting</li>
+</ul>
+</div>
+<div class="portfolio-tech">
+<strong>Technologies:</strong>
+<span class="tech-tag">Flutter</span>
+<span class="tech-tag">Node.js</span>
+<span class="tech-tag">MySQL</span>
+<span class="tech-tag">Redis</span>
+</div>
+<div class="portfolio-results">
+<strong>Results:</strong>
+<p>50% faster checkout process, 35% reduction in inventory errors, increased revenue by 25% through better analytics.</p>
+</div>
+<div class="portfolio-links">
+<a class="portfolio-link-btn" href="#" target="_blank">GitHub</a>
+<a class="portfolio-link-btn primary" href="#" target="_blank">Live Demo</a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-portfolio-3" data-element_type="column" data-id="portfolio-3" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-portfolio-3" data-element_type="column" data-id="portfolio-3" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-portfolio-card-3 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="portfolio-card-3" data-settings='{"_ob_use_harakiri":"yes","_ob_harakiri_writing_mode":"inherit","_ob_postman_use":"no","_ob_widget_stalker_use":"no","_ob_poopart_use":"yes","_ob_shadough_use":"no","_ob_allow_hoveranimator":"no"}' data-widget_type="text-editor.default">
 <div class="elementor-widget-container" data-aos="fade-up" data-aos-delay="250">
-<div class="portfolio-item" data-category="software">
+<div class="portfolio-item detailed" data-category="software business">
+<div class="portfolio-hero">
 <img alt="HealthMate Pro" class="portfolio-image" src="/assets/images/2021/07/healthmate-placeholder.jpg"/>
-<div class="portfolio-overlay">
+<div class="portfolio-category-badge">Software Development</div>
+</div>
+<div class="portfolio-content">
 <h4>HealthMate Pro</h4>
-<p>Healthcare Platform</p>
-<a class="portfolio-link" href="../case-studies/index.html">View Details</a>
+<p class="portfolio-subtitle">Healthcare Platform</p>
+<div class="portfolio-description">
+<p>A healthcare platform enabling patients to book appointments, access medical records, and communicate with healthcare providers securely.</p>
+</div>
+<div class="portfolio-problem">
+<strong>Problem Solved:</strong>
+<p>Difficulty booking appointments, lack of access to medical records, and poor patient-doctor communication.</p>
+</div>
+<div class="portfolio-features">
+<strong>Key Features:</strong>
+<ul>
+<li>Online appointment booking</li>
+<li>Medical record access</li>
+<li>Telemedicine integration</li>
+<li>Health tracking dashboard</li>
+<li>Secure messaging</li>
+</ul>
+</div>
+<div class="portfolio-tech">
+<strong>Technologies:</strong>
+<span class="tech-tag">Next.js</span>
+<span class="tech-tag">TypeScript</span>
+<span class="tech-tag">FastAPI</span>
+<span class="tech-tag">PostgreSQL</span>
+</div>
+<div class="portfolio-results">
+<strong>Results:</strong>
+<p>70% reduction in appointment wait times, 90% patient satisfaction rate, improved doctor efficiency by 45%.</p>
+</div>
+<div class="portfolio-links">
+<a class="portfolio-link-btn" href="#" target="_blank">GitHub</a>
+<a class="portfolio-link-btn primary" href="#" target="_blank">Live Demo</a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-portfolio-4" data-element_type="column" data-id="portfolio-4" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-portfolio-4" data-element_type="column" data-id="portfolio-4" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-portfolio-card-4 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="portfolio-card-4" data-settings='{"_ob_use_harakiri":"yes","_ob_harakiri_writing_mode":"inherit","_ob_postman_use":"no","_ob_widget_stalker_use":"no","_ob_poopart_use":"yes","_ob_shadough_use":"no","_ob_allow_hoveranimator":"no"}' data-widget_type="text-editor.default">
 <div class="elementor-widget-container" data-aos="fade-up" data-aos-delay="300">
-<div class="portfolio-item" data-category="software">
+<div class="portfolio-item detailed" data-category="software business">
+<div class="portfolio-hero">
 <img alt="THA Buyer" class="portfolio-image" src="/assets/images/2021/07/tha-placeholder.jpg"/>
-<div class="portfolio-overlay">
+<div class="portfolio-category-badge">Business Systems</div>
+</div>
+<div class="portfolio-content">
 <h4>THA Buyer</h4>
-<p>Agricultural Marketplace</p>
-<a class="portfolio-link" href="../case-studies/index.html">View Details</a>
+<p class="portfolio-subtitle">Agricultural Marketplace</p>
+<div class="portfolio-description">
+<p>An e-commerce platform designed for agricultural trading, connecting farmers directly with buyers for fair and transparent transactions.</p>
+</div>
+<div class="portfolio-problem">
+<strong>Problem Solved:</strong>
+<p>Lack of direct farmer-buyer connection, price exploitation by middlemen, and limited market access for small farmers.</p>
+</div>
+<div class="portfolio-features">
+<strong>Key Features:</strong>
+<ul>
+<li>Product catalog management</li>
+<li>Secure payment processing</li>
+<li>Order tracking system</li>
+<li>Vendor verification</li>
+<li>Price comparison tools</li>
+</ul>
+</div>
+<div class="portfolio-tech">
+<strong>Technologies:</strong>
+<span class="tech-tag">React Native</span>
+<span class="tech-tag">Python</span>
+<span class="tech-tag">Django</span>
+<span class="tech-tag">Stripe</span>
+</div>
+<div class="portfolio-results">
+<strong>Results:</strong>
+<p>300+ farmers onboarded, 45% increase in farmer income, 80% reduction in transaction costs.</p>
+</div>
+<div class="portfolio-links">
+<a class="portfolio-link-btn" href="#" target="_blank">GitHub</a>
+<a class="portfolio-link-btn primary" href="#" target="_blank">Live Demo</a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-portfolio-5" data-element_type="column" data-id="portfolio-5" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-portfolio-5" data-element_type="column" data-id="portfolio-5" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-portfolio-card-5 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="portfolio-card-5" data-settings='{"_ob_use_harakiri":"yes","_ob_harakiri_writing_mode":"inherit","_ob_postman_use":"no","_ob_widget_stalker_use":"no","_ob_poopart_use":"yes","_ob_shadough_use":"no","_ob_allow_hoveranimator":"no"}' data-widget_type="text-editor.default">
 <div class="elementor-widget-container" data-aos="fade-up" data-aos-delay="350">
-<div class="portfolio-item" data-category="cybersecurity">
+<div class="portfolio-item detailed" data-category="cybersecurity">
+<div class="portfolio-hero">
 <img alt="Cybersecurity Solutions" class="portfolio-image" src="/assets/images/2021/07/cybersec-placeholder.jpg"/>
-<div class="portfolio-overlay">
-<h4>Cybersecurity Solutions</h4>
-<p>Security Assessments</p>
-<a class="portfolio-link" href="../case-studies/index.html">View Details</a>
+<div class="portfolio-category-badge">Cybersecurity</div>
+</div>
+<div class="portfolio-content">
+<h4>Enterprise Security Assessment</h4>
+<p class="portfolio-subtitle">Comprehensive Security Audit</p>
+<div class="portfolio-description">
+<p>Full-scale penetration testing and vulnerability assessment for a financial institution, identifying and mitigating security risks.</p>
+</div>
+<div class="portfolio-problem">
+<strong>Problem Solved:</strong>
+<p>Potential security vulnerabilities in banking systems, compliance requirements, and need for robust security posture.</p>
+</div>
+<div class="portfolio-features">
+<strong>Key Features:</strong>
+<ul>
+<li>Penetration testing</li>
+<li>Vulnerability assessment</li>
+<li>Security audit reports</li>
+<li>Remediation recommendations</li>
+<li>Compliance verification</li>
+</ul>
+</div>
+<div class="portfolio-tech">
+<strong>Tools:</strong>
+<span class="tech-tag">Kali Linux</span>
+<span class="tech-tag">Burp Suite</span>
+<span class="tech-tag">OWASP</span>
+<span class="tech-tag">Wireshark</span>
+</div>
+<div class="portfolio-results">
+<strong>Results:</strong>
+<p>Identified 47 vulnerabilities, 95% remediation rate, achieved ISO 27001 compliance, zero security incidents in 12 months.</p>
+</div>
+<div class="portfolio-links">
+<a class="portfolio-link-btn" href="#" target="_blank">View Report</a>
+<a class="portfolio-link-btn primary" href="../contact/index.html">Request Assessment</a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-portfolio-6" data-element_type="column" data-id="portfolio-6" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-portfolio-6" data-element_type="column" data-id="portfolio-6" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-portfolio-card-6 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="portfolio-card-6" data-settings='{"_ob_use_harakiri":"yes","_ob_harakiri_writing_mode":"inherit","_ob_postman_use":"no","_ob_widget_stalker_use":"no","_ob_poopart_use":"yes","_ob_shadough_use":"no","_ob_allow_hoveranimator":"no"}' data-widget_type="text-editor.default">
 <div class="elementor-widget-container" data-aos="fade-up" data-aos-delay="400">
-<div class="portfolio-item" data-category="mobile">
-<img alt="Mobile App Development" class="portfolio-image" src="/assets/images/2021/07/mobile-placeholder.jpg"/>
-<div class="portfolio-overlay">
-<h4>Mobile Banking App</h4>
-<p>Fintech Application</p>
-<a class="portfolio-link" href="../case-studies/index.html">View Details</a>
+<div class="portfolio-item detailed" data-category="mobile">
+<div class="portfolio-hero">
+<img alt="Mobile Banking App" class="portfolio-image" src="/assets/images/2021/07/mobile-placeholder.jpg"/>
+<div class="portfolio-category-badge">Mobile Applications</div>
+</div>
+<div class="portfolio-content">
+<h4>Secure Banking App</h4>
+<p class="portfolio-subtitle">Fintech Application</p>
+<div class="portfolio-description">
+<p>A secure mobile banking application with advanced security features, real-time transactions, and comprehensive financial management tools.</p>
+</div>
+<div class="portfolio-problem">
+<strong>Problem Solved:</strong>
+<p>Limited mobile banking access, security concerns, and need for real-time financial management on-the-go.</p>
+</div>
+<div class="portfolio-features">
+<strong>Key Features:</strong>
+<ul>
+<li>Biometric authentication</li>
+<li>Real-time transactions</li>
+<li>Bill payment integration</li>
+<li>Investment tracking</li>
+<li>Budget management</li>
+</ul>
+</div>
+<div class="portfolio-tech">
+<strong>Technologies:</strong>
+<span class="tech-tag">Flutter</span>
+<span class="tech-tag">Dart</span>
+<span class="tech-tag">Firebase</span>
+<span class="tech-tag">Node.js</span>
+</div>
+<div class="portfolio-results">
+<strong>Results:</strong>
+<p>50,000+ active users, 99.9% uptime, 0 fraud incidents, 4.8/5 app store rating.</p>
+</div>
+<div class="portfolio-links">
+<a class="portfolio-link-btn" href="#" target="_blank">GitHub</a>
+<a class="portfolio-link-btn primary" href="#" target="_blank">App Store</a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-portfolio-7" data-element_type="column" data-id="portfolio-7" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-portfolio-7" data-element_type="column" data-id="portfolio-7" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-portfolio-card-7 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="portfolio-card-7" data-settings='{"_ob_use_harakiri":"yes","_ob_harakiri_writing_mode":"inherit","_ob_postman_use":"no","_ob_widget_stalker_use":"no","_ob_poopart_use":"yes","_ob_shadough_use":"no","_ob_allow_hoveranimator":"no"}' data-widget_type="text-editor.default">
 <div class="elementor-widget-container" data-aos="fade-up" data-aos-delay="450">
-<div class="portfolio-item" data-category="ai">
+<div class="portfolio-item detailed" data-category="ai">
+<div class="portfolio-hero">
 <img alt="AI Chatbot" class="portfolio-image" src="/assets/images/2021/07/ai-placeholder.jpg"/>
-<div class="portfolio-overlay">
+<div class="portfolio-category-badge">AI Projects</div>
+</div>
+<div class="portfolio-content">
 <h4>AI Customer Support</h4>
-<p>Chatbot Implementation</p>
-<a class="portfolio-link" href="../case-studies/index.html">View Details</a>
+<p class="portfolio-subtitle">Intelligent Chatbot System</p>
+<div class="portfolio-description">
+<p>An AI-powered customer support chatbot that handles inquiries, provides 24/7 service, and integrates with existing CRM systems.</p>
+</div>
+<div class="portfolio-problem">
+<strong>Problem Solved:</strong>
+<p>Limited support hours, high response times, and increasing customer service costs.</p>
+</div>
+<div class="portfolio-features">
+<strong>Key Features:</strong>
+<ul>
+<li>Natural language processing</li>
+<li>24/7 availability</li>
+<li>CRM integration</li>
+<li>Multi-language support</li>
+<li>Sentiment analysis</li>
+</ul>
+</div>
+<div class="portfolio-tech">
+<strong>Technologies:</strong>
+<span class="tech-tag">OpenAI</span>
+<span class="tech-tag">LangChain</span>
+<span class="tech-tag">Python</span>
+<span class="tech-tag">FastAPI</span>
+</div>
+<div class="portfolio-results">
+<strong>Results:</strong>
+<p>80% reduction in response time, 60% decrease in support costs, 92% customer satisfaction, 24/7 coverage achieved.</p>
+</div>
+<div class="portfolio-links">
+<a class="portfolio-link-btn" href="#" target="_blank">GitHub</a>
+<a class="portfolio-link-btn primary" href="#" target="_blank">Live Demo</a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-portfolio-8" data-element_type="column" data-id="portfolio-8" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-portfolio-8" data-element_type="column" data-id="portfolio-8" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-portfolio-card-8 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="portfolio-card-8" data-settings='{"_ob_use_harakiri":"yes","_ob_harakiri_writing_mode":"inherit","_ob_postman_use":"no","_ob_widget_stalker_use":"no","_ob_poopart_use":"yes","_ob_shadough_use":"no","_ob_allow_hoveranimator":"no"}' data-widget_type="text-editor.default">
 <div class="elementor-widget-container" data-aos="fade-up" data-aos-delay="500">
-<div class="portfolio-item" data-category="web">
-<img alt="Corporate Website" class="portfolio-image" src="/assets/images/2021/07/web-placeholder.jpg"/>
-<div class="portfolio-overlay">
-<h4>Corporate Website</h4>
-<p>Web Design & Development</p>
-<a class="portfolio-link" href="../case-studies/index.html">View Details</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-portfolio-9" data-element_type="column" data-id="portfolio-9" data-settings='{"_ob_column_hoveranimator":"no","_ob_column_has_pseudo":"no"}'>
-<div class="elementor-widget-wrap elementor-element-populated">
-<div class="elementor-element elementor-element-portfolio-card-9 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="portfolio-card-9" data-settings='{"_ob_use_harakiri":"yes","_ob_harakiri_writing_mode":"inherit","_ob_postman_use":"no","_ob_widget_stalker_use":"no","_ob_poopart_use":"yes","_ob_shadough_use":"no","_ob_allow_hoveranimator":"no"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container" data-aos="fade-up" data-aos-delay="550">
-<div class="portfolio-item" data-category="software">
+<div class="portfolio-item detailed" data-category="software business">
+<div class="portfolio-hero">
 <img alt="ERP System" class="portfolio-image" src="/assets/images/2021/07/erp-placeholder.jpg"/>
-<div class="portfolio-overlay">
+<div class="portfolio-category-badge">Business Systems</div>
+</div>
+<div class="portfolio-content">
 <h4>Enterprise ERP</h4>
-<p>Business Management System</p>
-<a class="portfolio-link" href="../case-studies/index.html">View Details</a>
+<p class="portfolio-subtitle">Business Management System</p>
+<div class="portfolio-description">
+<p>A comprehensive ERP system integrating finance, HR, inventory, and operations for seamless business management.</p>
+</div>
+<div class="portfolio-problem">
+<strong>Problem Solved:</strong>
+<p>Fragmented business systems, data silos, and lack of real-time business insights.</p>
+</div>
+<div class="portfolio-features">
+<strong>Key Features:</strong>
+<ul>
+<li>Financial management</li>
+<li>HR & payroll</li>
+<li>Inventory control</li>
+<li>Project management</li>
+<li>Business intelligence</li>
+</ul>
+</div>
+<div class="portfolio-tech">
+<strong>Technologies:</strong>
+<span class="tech-tag">React</span>
+<span class="tech-tag">Python</span>
+<span class="tech-tag">Django</span>
+<span class="tech-tag">PostgreSQL</span>
+</div>
+<div class="portfolio-results">
+<strong>Results:</strong>
+<p>60% improvement in operational efficiency, 40% reduction in manual processes, real-time business insights achieved.</p>
+</div>
+<div class="portfolio-links">
+<a class="portfolio-link-btn" href="#" target="_blank">GitHub</a>
+<a class="portfolio-link-btn primary" href="#" target="_blank">Live Demo</a>
+</div>
 </div>
 </div>
 </div>
@@ -370,37 +631,60 @@
 <script>AOS.init({duration: 1000, once: true, offset: 50, easing: "ease-out-cubic"});</script>
 <script src="/assets/js/hero-slider.js"></script>
 <script>
-// Portfolio Filter Functionality
+// Portfolio Filter & Search Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const portfolioItems = document.querySelectorAll('.portfolio-item.detailed');
+    const searchInput = document.getElementById('portfolio-search-input');
     
+    let currentFilter = 'all';
+    let currentSearch = '';
+    
+    // Filter functionality
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Remove active class from all buttons
             filterBtns.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
             this.classList.add('active');
-            
-            const filter = this.getAttribute('data-filter');
-            
-            portfolioItems.forEach(item => {
-                if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                    item.style.display = 'block';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
-                    }, 10);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.8)';
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 300);
-                }
-            });
+            currentFilter = this.getAttribute('data-filter');
+            filterPortfolio();
         });
     });
+    
+    // Search functionality
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            currentSearch = this.value.toLowerCase();
+            filterPortfolio();
+        });
+    }
+    
+    function filterPortfolio() {
+        portfolioItems.forEach(item => {
+            const categories = item.getAttribute('data-category');
+            const title = item.querySelector('h4').textContent.toLowerCase();
+            const subtitle = item.querySelector('.portfolio-subtitle').textContent.toLowerCase();
+            const description = item.querySelector('.portfolio-description').textContent.toLowerCase();
+            
+            const matchesFilter = currentFilter === 'all' || categories.includes(currentFilter);
+            const matchesSearch = currentSearch === '' || 
+                                  title.includes(currentSearch) || 
+                                  subtitle.includes(currentSearch) || 
+                                  description.includes(currentSearch);
+            
+            if (matchesFilter && matchesSearch) {
+                item.classList.remove('hidden');
+                item.classList.add('fade-in');
+                item.style.display = 'flex';
+            } else {
+                item.classList.add('hidden');
+                item.classList.remove('fade-in');
+                item.style.display = 'none';
+            }
+        });
+    }
+    
+    // Initialize with all items visible
+    filterPortfolio();
 });
 </script>
 <script src="/assets/js/chatbot.js"></script>
