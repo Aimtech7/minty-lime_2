@@ -7,6 +7,11 @@ class AimtechChatbot {
         this.typingIndicatorId = 'ai-typing-indicator';
         this.clearButton = null;
         
+        // Chatbot UI Elements
+        this.toggleBtn = document.getElementById('chatbot-toggle-btn');
+        this.chatWindow = document.getElementById('chatbot-window');
+        this.closeBtn = document.getElementById('chatbot-close-btn');
+        
         this.knowledgeBase = {
             // Company Information
             "company": "AimTech & Aimnex Tech Ventures is a premier technology consulting firm dedicated to accelerating digital transformation through innovative software, robust cybersecurity, and intelligent AI solutions. We partner with businesses to deliver cutting-edge technology solutions that drive growth and efficiency.",
@@ -107,6 +112,45 @@ class AimtechChatbot {
             this.appendMessage(this.knowledgeBase.hello, 'ai');
             this.saveConversation();
         }
+
+        // Toggle Logic
+        if (this.toggleBtn) {
+            this.toggleBtn.addEventListener('click', () => this.toggleChat());
+        }
+        if (this.closeBtn) {
+            this.closeBtn.addEventListener('click', () => this.closeChat());
+        }
+
+        // Escape key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.chatWindow && this.chatWindow.style.display === 'flex') {
+                this.closeChat();
+            }
+        });
+    }
+
+    toggleChat() {
+        if (!this.chatWindow) return;
+        if (this.chatWindow.style.display === 'none' || this.chatWindow.style.display === '') {
+            this.openChat();
+        } else {
+            this.closeChat();
+        }
+    }
+
+    openChat() {
+        if (!this.chatWindow) return;
+        this.chatWindow.style.display = 'flex';
+        // Add a slight delay to allow display:flex to apply before focusing
+        setTimeout(() => {
+            if (this.inputField) this.inputField.focus();
+            this.scrollToBottom();
+        }, 50);
+    }
+
+    closeChat() {
+        if (!this.chatWindow) return;
+        this.chatWindow.style.display = 'none';
     }
 
     addClearButton() {
