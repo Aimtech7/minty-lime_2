@@ -14,7 +14,7 @@ class AimtechChatbot {
             "about": "AimTech & Aimnex Tech Ventures is a premier technology consulting firm dedicated to accelerating digital transformation through innovative software, robust cybersecurity, and intelligent AI solutions.",
             "ai": "Our AI Solutions include custom AI Chatbots, business process automation, AI-powered applications, and custom AI integrations to supercharge your workflow.",
             "mobile": "We build high-performance, native-like mobile experiences using Android and cross-platform technologies like Flutter.",
-            "portfolio": "Our portfolio includes successful enterprise SaaS platforms, secure mobile banking apps, and highly optimized e-commerce solutions. Check out our Case Studies for more details!"
+            "portfolio": "Our portfolio includes successful enterprise SaaS platforms, secure mobile apps, and robust systems like EduWell (Education), CyberCafe POS (Retail/Business), HealthMate Pro (Healthcare), THA Buyer, and AIM Player. Check out our Case Studies for more details!"
         };
 
         this.init();
